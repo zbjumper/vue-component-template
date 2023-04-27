@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
-      entry: 'package/index.tsx',
+      entry: 'src/index.ts',
       name: 'custom-component'
     },
     rollupOptions: {
@@ -19,5 +18,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue(), vueJsx()]
+  plugins: [vue()]
 });
